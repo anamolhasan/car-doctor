@@ -11,15 +11,15 @@ const Navbar = () => {
         </li>
        
         <li>
-          <Link href={'/services'}>Services</Link>
+          <Link href={'/services'}>Service</Link>
         </li>
        
         <li>
-          <Link href={'/blogs'}>Blogs</Link>
+          <Link href={'/blogs'}>Blog</Link>
         </li>
        
         <li>
-          <Link href={'/contact'}>Contact1</Link>
+          <Link href={'/contact'}>Contact</Link>
         </li>
        
        

@@ -27,11 +27,11 @@ const ServicesSection = async () => {
             <div className="flex justify-between items-center mt-4">
                 <div>
                     <h2 className="font-bold text-xl">{item.title}</h2>
-                    <p className="font-bold text-xl">Price : ${item.price}</p>
+                    <p className="font-bold text-xl text-orange-500">Price : ${item.price}</p>
                 </div>
                 <div>
                     <Link 
-                    href={``}
+                    href={`/services/${item._id}`}
                     className="text-orange-500"
                     >
                       <FaArrowRight />

@@ -4,8 +4,8 @@ export const collectionNameObj = {
     servicesCollection: 'test-services'
 }
 
-export default function dbConnect(collectionName) {
-  const uri = process.env.MONGODB_URI;
+function dbConnect(collectionName) {
+  const uri = process.env.MONGODB_URI
   // Create a MongoClient with a MongoClientOptions object to set the Stable API version
   const client = new MongoClient(uri, {
     serverApi: {
@@ -14,5 +14,8 @@ export default function dbConnect(collectionName) {
       deprecationErrors: true,
     },
   });
+
   return client.db(process.env.DB_NAME).collection(collectionName)
 }
+
+export default dbConnect
