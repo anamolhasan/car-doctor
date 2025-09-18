@@ -1,4 +1,4 @@
-import { collectionNameObj } from "@/lib/dbConnect";
+import dbConnect, { collectionNameObj } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,8 +6,9 @@ import React from "react";
 
 const ServiceDetailsPage = async ({ params }) => {
   const p = await params;
-  const serviceCollection = await dbConnect(collectionNameObj.servicesCollection);
+  const serviceCollection = dbConnect(collectionNameObj.servicesCollection);
   const data = await serviceCollection.findOne({ _id: new ObjectId(p.id) });
+  console.log(data)
   return (
     <div className="container mx-auto">
       <section className=" flex justify-center">
