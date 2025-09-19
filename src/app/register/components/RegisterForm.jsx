@@ -12,7 +12,7 @@ export default function RegisterForm() {
         <input
           type="text"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered w-full mb-5"
           name="name"
         />
       </label>
@@ -24,7 +24,7 @@ export default function RegisterForm() {
           type="text"
           name="email"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered w-full mb-5"
         />
       </label>
       <label className="form-control w-full">
@@ -35,7 +35,7 @@ export default function RegisterForm() {
           type="password"
           name="password"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered w-full mb-5"
         />
       </label>
       <button className="w-full h-12 bg-orange-500 text-white font-bold">

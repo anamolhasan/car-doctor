@@ -13,10 +13,10 @@ export default function LoginForm() {
           type="text"
           name="email"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered w-full mb-5"
         />
       </label>
-      <label className="form-control w-full">
+      <label className="form-control w-full mt-5">
         <div className="label w-full">
           <span className="label-text font-bold">Password</span>
         </div>
@@ -24,7 +24,7 @@ export default function LoginForm() {
           type="password"
           name="password"
           placeholder="Type here"
-          className="input input-bordered w-full"
+          className="input input-bordered w-full mb-5"
         />
       </label>
       <button className="w-full h-12 bg-orange-500 text-white font-bold">
