@@ -4,11 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+// create metadata
+export async function generateMetadata({ params, }) {
+  const { id } = await params
+  // fetch data
+   const serviceCollection = dbConnect(collectionNameObj.servicesCollection);
+   const data = await serviceCollection.findOne({ _id: new ObjectId(id) });
+  return {
+    title: data?.title,
+    description:data?.description
+  }
+}
+
+// -------    
 const ServiceDetailsPage = async ({ params }) => {
   const p = await params;
   const serviceCollection = dbConnect(collectionNameObj.servicesCollection);
   const data = await serviceCollection.findOne({ _id: new ObjectId(p.id) });
-  console.log(data)
+  // console.log(data)
   return (
     <div className="container mx-auto">
       <section className=" flex justify-center">

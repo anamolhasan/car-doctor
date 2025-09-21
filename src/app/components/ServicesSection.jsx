@@ -10,7 +10,7 @@ const ServicesSection = async () => {
 
   return (
     <div className="grid grid-cols-12 gap-4 container mx-auto">
-      {data.map((item) => {
+      {data?.map((item) => {
         return (
           <div
             key={item._id}
