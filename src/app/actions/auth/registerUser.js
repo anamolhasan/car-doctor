@@ -12,7 +12,7 @@ export const registerUser = async(payload) => {
     const user = await userCollection.findOne({email: payload.email})
 
     if(!user){
-        const hashedPassword = await bcrypt.hash(password, 5)
+        const hashedPassword = await bcrypt.hash(password, 10)
         payload.password = hashedPassword
          const result = await userCollection.insertOne(payload)
          // ObjectId কে string এ রূপান্তর করো
