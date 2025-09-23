@@ -1,5 +1,5 @@
+
 import Image from 'next/image'
-import React from 'react'
 import LoginForm from './components/LoginForm'
 
 export default function LoginPage() {
@@ -15,6 +15,7 @@ export default function LoginPage() {
             width={460}
             height={500}
             alt={"Authentication Image"}
+             priority
           />
         </div>
 

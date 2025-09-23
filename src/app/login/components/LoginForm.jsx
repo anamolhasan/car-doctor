@@ -1,10 +1,21 @@
+'use client'
 import React from 'react'
 import SocialLogin from './SocialLogin'
 import Link from 'next/link'
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 export default function LoginForm() {
+
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    await signIn('credentials', {email, password})
+  }
   return (
-    <form  className="w-full max-w-lg space-y-8">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-8">
       <label className="form-control w-full">
         <div className="label w-full">
           <span className="label-text  font-bold">Email</span>
